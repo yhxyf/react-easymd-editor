@@ -1,0 +1,35 @@
+.better-markdown {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.better-markdown-h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+.better-markdown-h2 {
+  color: #34495e;
+}
+.better-markdown-p {
+  margin-bottom: 15px;
+}
+.better-markdown-a {
+  color: #3498db;
+  text-decoration: none;
+}
+.better-markdown-a:hover {
+  text-decoration: underline;
+}
+.better-markdown-inline-code {
+  background-color: #f8f8f8;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+.better-markdown-code-block {
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  padding: 15px;
+  overflow-x: auto;
+}
