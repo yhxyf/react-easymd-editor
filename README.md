@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# React Easy Markdown
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Easy Markdown 是一个简单易用的 React 组件，用于渲染和编辑 Markdown 内容。它包括两个主要组件：`EasyMarkdown` 用于渲染 Markdown，以及 `EasyMarkdownEditor` 用于编辑 Markdown。
 
-## Available Scripts
+## 安装
 
-In the project directory, you can run:
+使用 npm 安装：
 
-### `npm start`
+```bash
+npm install react-easy-markdown
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+或使用 yarn：
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+yarn add react-easy-markdown
+```
 
-### `npm test`
+## 使用方法
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### EasyMarkdown 组件
 
-### `npm run build`
+用于渲染 Markdown 内容：
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+import React from 'react';
+import { EasyMarkdown } from 'react-easy-markdown';
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+const MyComponent = () => {
+  const markdown = '# Hello, world!\n\nThis is some **bold** text.';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  return <EasyMarkdown>{markdown}</EasyMarkdown>;
+};
+```
 
-### `npm run eject`
+### EasyMarkdownEditor 组件
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+用于编辑 Markdown 内容：
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx
+import React, { useState } from 'react';
+import { EasyMarkdownEditor } from 'react-easy-markdown';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const MyEditorComponent = () => {
+  const [markdown, setMarkdown] = useState('# Start writing here');
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  const handleEditorChange = ({ text }) => {
+    setMarkdown(text);
+  };
 
-## Learn More
+  return (
+    <EasyMarkdownEditor
+      value={markdown}
+      onChange={handleEditorChange}
+    />
+  );
+};
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 属性
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### EasyMarkdown
 
-### Code Splitting
+| 属性 | 类型 | 描述 |
+|------|------|------|
+| children | string | 要渲染的 Markdown 内容 |
+| className | string | 可选的自定义 CSS 类名 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### EasyMarkdownEditor
 
-### Analyzing the Bundle Size
+| 属性 | 类型 | 描述 |
+|------|------|------|
+| value | string | 编辑器的当前 Markdown 内容 |
+| onChange | function | 当内容变化时调用的回调函数 |
+| className | string | 可选的自定义 CSS 类名 |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 贡献
 
-### Making a Progressive Web App
+欢迎贡献！请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 了解如何开始。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 许可证
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
