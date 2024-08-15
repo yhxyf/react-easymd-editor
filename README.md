@@ -1,6 +1,6 @@
-# React Easy Markdown
+# React Easy Markdown Editor
 
-React Easy Markdown 是一个简单易用的 React 组件，用于渲染和编辑 Markdown 内容。它包括两个主要组件：`EasyMarkdown` 用于渲染 Markdown，以及 `EasyMarkdownEditor` 用于编辑 Markdown。
+React Easy Markdown Editor 是一个简单易用的 React 组件，用于渲染和编辑 Markdown 内容。它包括两个主要组件：`EasyMarkdown` 用于渲染 Markdown，以及 `EasyMarkdownEditor` 用于编辑 Markdown。
 
 ## 安装
 
