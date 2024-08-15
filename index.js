@@ -1,2 +1,2 @@
-export { default as EasyMarkdown } from './src/EasyMarkdown';
-export { default as EasyMarkdownEditor } from './src/EasyMarkdownEditor';
+export { default as EasyMarkdown } from './EasyMarkdown';
+export { default as EasyMarkdownEditor } from './EasyMarkdownEditor';

@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import EasyMarkdown from './EasyMarkdown';
+import EasyMarkdownEditor from './EasyMarkdownEditor';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="App">
+      <EasyMarkdown>
+        {`3. **加载器（loaders）**：[[webpack loader]]配置 Webpack 如何处 文件。`}
+      </EasyMarkdown>
+
+      <EasyMarkdownEditor style={{ height: "500px" }} />
+    </div>
   </React.StrictMode>
 );
 
